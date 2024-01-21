@@ -11,6 +11,7 @@ public class PersonJsonWriter implements Writer<PersonInfo> {
     public void write(File file, PersonInfo object) {
         JsonMapper jsonMapper = new JsonMapper();
         jsonMapper.enable(SerializationFeature.WRAP_ROOT_VALUE);
+
         try {
             jsonMapper.writeValue(file, object);
         } catch (IOException e) {

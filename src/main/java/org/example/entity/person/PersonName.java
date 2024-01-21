@@ -3,14 +3,13 @@ package org.example.entity.person;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PersonName {
+    @JsonProperty("LastName")
+    private String lastName;
     @JsonProperty("FirstName")
     private String firstName;
 
-    @JsonProperty("LastName")
-    private String lastName;
-
-    @JsonProperty("SecondName")
-    private String secondName;
+    @JsonProperty("MiddleName")
+    private String middleName;
 
     public String getFirstName() {
         return firstName;
@@ -20,8 +19,8 @@ public class PersonName {
         return lastName;
     }
 
-    public String getSecondName() {
-        return secondName;
+    public String getMiddleName() {
+        return middleName;
     }
 
     public void setFirstName(String firstName) {
@@ -32,8 +31,8 @@ public class PersonName {
         this.lastName = lastName;
     }
 
-    public void setSecondName(String secondName) {
-        this.secondName = secondName;
+    public void setMiddleName(String secondName) {
+        this.middleName = secondName;
     }
 
     @Override
@@ -41,7 +40,7 @@ public class PersonName {
         return "PersonName{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", secondName='" + secondName + '\'' +
+                ", secondName='" + middleName + '\'' +
                 '}';
     }
 }

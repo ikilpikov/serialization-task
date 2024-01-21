@@ -25,15 +25,15 @@ public class ClientToPersonConverter {
         Dul dul = clientInfo.getClientFindInfo().getDul();
         personName.setFirstName(dul.getFirstName());
         personName.setLastName(dul.getLastName());
-        personName.setSecondName(dul.getSecondName());
+        personName.setMiddleName(dul.getSecondName());
 
         IdentityCard identityCard = new IdentityCard();
-        personInfo.setIdentityCard(identityCard);
+        findPersonInfo.setIdentityCard(identityCard);
         identityCard.setIdType(dul.getDocumentType());
         identityCard.setIdSeries(dul.getSeries());
         identityCard.setIdNum(dul.getNumber());
 
-        personInfo.setPartyId(clientInfo.getClientFindInfo().getPartyId());
+        findPersonInfo.setPartyId(clientInfo.getClientFindInfo().getPartyId());
 
         return personInfo;
     }
