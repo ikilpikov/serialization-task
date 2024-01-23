@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SerializationTest {
     Reader<ClientInfo> reader;
+
     @BeforeEach
     void setUp() {
         reader = new ClientInfoXmlReader();
